@@ -1,11 +1,12 @@
 import './App.css';
-import Card from './components/Card';
+import ProfileCard from './components/profileCard';
+import profileImage from './components/img/profileImage.jpeg';
 
 function App() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <Card name="divyansh" />
-      <Card name="aryan"  />
+      <ProfileCard name="divyansh" profileImage={profileImage} />
+      <ProfileCard name="aryan" />
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import noImage from './img/noImage.png';
 
-export default function Card({name, button="Click me!"}){
+export default function ProfileCard({ name, button = "Click me!", profileImage = noImage }) {
   return (
     <div className="relative ml-4 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
       <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
         <img
-          src="https://images.pexels.com/photos/1013326/pexels-photo-1013326.jpeg?auto=compress&cs=tinysrgb&w=400"
+          src={profileImage}
           alt="not found"
           className="h-full w-full object-cover"
         />
@@ -30,8 +31,9 @@ export default function Card({name, button="Click me!"}){
       </div>
     </div>
   );
-};
+}
 
-Card.propTypes = {
-  name: PropTypes.string.isRequired
+ProfileCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  button: PropTypes.string
 };
