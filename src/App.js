@@ -1,14 +1,16 @@
 import './App.css';
-import ProfileCard from './components/profileCard';
-import profileImage from './components/img/profileImage.jpeg';
+import ColorBar from './components/ColorBar';
 
 function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <ProfileCard name="divyansh" profileImage={profileImage} />
-      <ProfileCard name="aryan" />
-    </div>
-  );
+    <>
+       <main className="flex min-h-screen flex-col items-center justify-center p-24">
+        <h1 className="text-4xl font-bold mb-8">Welcome to Color Selector</h1>
+        <p className="text-xl mb-4">Select a color from the bar below</p>
+        <ColorBar />
+      </main>
+    </>
+  )
 }
 
 export default App;
